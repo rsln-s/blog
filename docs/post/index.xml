@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ruslan Shaydulin&#39;s Blog</title>
-    <link>http://blog.shaydul.in/</link>
-    <description>Recent content on Ruslan Shaydulin&#39;s Blog</description>
+    <title>Posts on Ruslan Shaydulin&#39;s Blog</title>
+    <link>http://blog.shaydul.in/post/</link>
+    <description>Recent content in Posts on Ruslan Shaydulin&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Wed, 20 Sep 2017 12:25:35 -0400</lastBuildDate>
     
-	<atom:link href="http://blog.shaydul.in/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://blog.shaydul.in/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
