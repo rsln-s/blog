@@ -88,7 +88,7 @@ As shown in the figure, multilevel hypergraph partitioning consists of three sta
 
 ## So what is my research about?
 
-This is where I can finally explain my research! My work focuses around improving the quality of coarsening (left side of the "V") by improving the quality of matching. My first paper (with I. Safro and J. Chen) introduces a new similarity metric for vertices in hypergraph. But that is a story for a different blog post...
+This is where I can finally explain my research! My work focuses around improving the quality of coarsening (left side of the "V") by improving the quality of matching. That is, I'm working towards making more accurate decisions when choosing which vertices to merge. My first paper (with I. Safro and J. Chen) introduces a new similarity metric for vertices in hypergraph. But that is a story for a different blog post...
 
 [^1]: In other words, if graph is a pair of sets \\(G=(V,E)\\), where \\(V\\) is the set of vertices, \\(E\\) is the set of edges and the cardinality of each element in \\(E\\) is two (\\(|e| = 2\,\forall e\in E\\)), a hypergraph is the same pair \\(H = (V,E)\\), except the cardinality of elements in \\(E\\) is not limited.
 [^2]: As opposed to just two sets: hyperedges and vertices.
