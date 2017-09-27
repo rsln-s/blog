@@ -17,7 +17,7 @@
 
 
 <meta name="author" content="Ruslan Shaydulin" />
-  <meta name="description" content="Hypergraphs and their partitionings: What do they know? Do they know things? Let&amp;rsquo;s find out! Even if you&amp;rsquo;re a seasoned CS researcher, you may not have heard about the burgeoning field of hypergraph partitioning. That&amp;rsquo;s a terrible omission, but this post will tell you all the basics you need to know.
+  <meta name="description" content="Even if you&amp;rsquo;re a seasoned CS researcher, you may not have heard about the burgeoning field of hypergraph partitioning. That&amp;rsquo;s an unfortunate omission, but this post will tell you all the basics you need to know.
 In this post, I&amp;rsquo;ll try to answer three basic questions:
  What is a hypergraph and the hypergraph partitioning?
  Why would you want to partition a hypergraph?
@@ -50,9 +50,7 @@ In this post, I&amp;rsquo;ll try to answer three basic questions:
 <link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
 
 <meta property="og:title" content="Hypergraph Partitioning 101" />
-<meta property="og:description" content="Hypergraphs and their partitionings: What do they know? Do they know things? Let&rsquo;s find out!
-
-Even if you&rsquo;re a seasoned CS researcher, you may not have heard about the burgeoning field of hypergraph partitioning. That&rsquo;s a terrible omission, but this post will tell you all the basics you need to know.
+<meta property="og:description" content="Even if you&rsquo;re a seasoned CS researcher, you may not have heard about the burgeoning field of hypergraph partitioning. That&rsquo;s an unfortunate omission, but this post will tell you all the basics you need to know.
 
 In this post, I&rsquo;ll try to answer three basic questions:
 
@@ -86,9 +84,7 @@ Without much further ado, let&rsquo;s get started!
 
 
 <meta itemprop="name" content="Hypergraph Partitioning 101">
-<meta itemprop="description" content="Hypergraphs and their partitionings: What do they know? Do they know things? Let&rsquo;s find out!
-
-Even if you&rsquo;re a seasoned CS researcher, you may not have heard about the burgeoning field of hypergraph partitioning. That&rsquo;s a terrible omission, but this post will tell you all the basics you need to know.
+<meta itemprop="description" content="Even if you&rsquo;re a seasoned CS researcher, you may not have heard about the burgeoning field of hypergraph partitioning. That&rsquo;s an unfortunate omission, but this post will tell you all the basics you need to know.
 
 In this post, I&rsquo;ll try to answer three basic questions:
 
@@ -106,15 +102,13 @@ Without much further ado, let&rsquo;s get started!
 
 
 <meta itemprop="dateModified" content="2017-09-20T12:25:35-04:00" />
-<meta itemprop="wordCount" content="941">
+<meta itemprop="wordCount" content="946">
 
 
 
 <meta itemprop="keywords" content="hypergraph partitioning,research,101," />
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Hypergraph Partitioning 101"/>
-<meta name="twitter:description" content="Hypergraphs and their partitionings: What do they know? Do they know things? Let&rsquo;s find out!
-
-Even if you&rsquo;re a seasoned CS researcher, you may not have heard about the burgeoning field of hypergraph partitioning. That&rsquo;s a terrible omission, but this post will tell you all the basics you need to know.
+<meta name="twitter:description" content="Even if you&rsquo;re a seasoned CS researcher, you may not have heard about the burgeoning field of hypergraph partitioning. That&rsquo;s an unfortunate omission, but this post will tell you all the basics you need to know.
 
 In this post, I&rsquo;ll try to answer three basic questions:
 
@@ -205,9 +199,7 @@ Without much further ado, let&rsquo;s get started!
 
     
     <div class="post-content">
-      <h2 id="hypergraphs-and-their-partitionings-what-do-they-know-do-they-know-things-let-s-find-out">Hypergraphs and their partitionings: What do they know? Do they know things? Let&rsquo;s find out!</h2>
-
-<p>Even if you&rsquo;re a seasoned CS researcher, you may not have heard about the burgeoning field of hypergraph partitioning. That&rsquo;s a terrible omission, but this post will tell you all the basics you need to know.</p>
+      <p>Even if you&rsquo;re a seasoned CS researcher, you may not have heard about the burgeoning field of hypergraph partitioning. That&rsquo;s an unfortunate omission, but this post will tell you all the basics you need to know.</p>
 
 <p>In this post, I&rsquo;ll try to answer three basic questions:</p>
 
@@ -225,11 +217,11 @@ Without much further ado, let&rsquo;s get started!
 
 <h2 id="so-what-is-a-hypergraph-and-what-is-a-partitioning">So what is a hypergraph and what is a partitioning?</h2>
 
-<p>A hypergraph is a simple generalization of a graph: whereas in a graph each edge connects just two nodes, in hypergraph an edge can connect an arbitrary number of nodes<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>. Edges in hypergraph are referred to as hyperedges. I will call them simply edges where it doesn&rsquo;t cause confusion.</p>
+<p>A hypergraph is a generalization of a graph: whereas in a graph each edge connects just two nodes, in hypergraph an edge can connect an arbitrary number of nodes<sup class="footnote-ref" id="fnref:1"><a rel="footnote" href="#fn:1">1</a></sup>. Edges in hypergraph are referred to as hyperedges. I will call them simply edges where it doesn&rsquo;t cause confusion.</p>
 
-<p>In hypergraph partitioning the goal is to separate vertices into multiple <em>partitions</em> such that a metric on the cut is minimized (here cut is simply the set of edges that span more than one partition). The simplest (and often used) such metric is the number of cut edges.</p>
+<p>In hypergraph partitioning the goal is to separate vertices into multiple <em>partitions</em> such that a the cut is minimized and partitions are approximately equal. Here cut is simply the set of edges that span more than one partition. The simplest (and often used) minimization objective is the number of cut edges. The condition that partitions must have approximately the same size is often called &ldquo;imbalance constraint&rdquo;.</p>
 
-<p>More simply put, <strong>we want to partition a hypergraph while cutting as few edges as possible</strong>.</p>
+<p>Simply put, <strong>we want to partition a hypergraph into mostly equal parts while cutting as few edges as possible</strong>.</p>
 
 <p>The following figure provides an example of a hypergraph with 5 edges and 8 vertices.</p>
 

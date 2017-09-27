@@ -17,9 +17,7 @@
       <pubDate>Wed, 20 Sep 2017 12:25:35 -0400</pubDate>
       
       <guid>http://blog.shaydul.in/post/hypergraph-partitioning-101/</guid>
-      <description>&lt;h2 id=&#34;hypergraphs-and-their-partitionings-what-do-they-know-do-they-know-things-let-s-find-out&#34;&gt;Hypergraphs and their partitionings: What do they know? Do they know things? Let&amp;rsquo;s find out!&lt;/h2&gt;
-
-&lt;p&gt;Even if you&amp;rsquo;re a seasoned CS researcher, you may not have heard about the burgeoning field of hypergraph partitioning. That&amp;rsquo;s a terrible omission, but this post will tell you all the basics you need to know.&lt;/p&gt;
+      <description>&lt;p&gt;Even if you&amp;rsquo;re a seasoned CS researcher, you may not have heard about the burgeoning field of hypergraph partitioning. That&amp;rsquo;s an unfortunate omission, but this post will tell you all the basics you need to know.&lt;/p&gt;
 
 &lt;p&gt;In this post, I&amp;rsquo;ll try to answer three basic questions:&lt;/p&gt;
 
