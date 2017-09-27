@@ -15,9 +15,8 @@ contentCopyright: false
 reward: false
 mathjax: true
 ---
-## Hypergraphs and their partitionings: What do they know? Do they know things? Let's find out!
 
-Even if you're a seasoned CS researcher, you may not have heard about the burgeoning field of hypergraph partitioning. That's a terrible omission, but this post will tell you all the basics you need to know.
+Even if you're a seasoned CS researcher, you may not have heard about the burgeoning field of hypergraph partitioning. That's an unfortunate omission, but this post will tell you all the basics you need to know.
 
 In this post, I'll try to answer three basic questions:
 
@@ -33,11 +32,11 @@ Without much further ado, let's get started!
 
 ## So what is a hypergraph and what is a partitioning?
 
-A hypergraph is a simple generalization of a graph: whereas in a graph each edge connects just two nodes, in hypergraph an edge can connect an arbitrary number of nodes[^1]. Edges in hypergraph are referred to as hyperedges. I will call them simply edges where it doesn't cause confusion.
+A hypergraph is a generalization of a graph: whereas in a graph each edge connects just two nodes, in hypergraph an edge can connect an arbitrary number of nodes[^1]. Edges in hypergraph are referred to as hyperedges. I will call them simply edges where it doesn't cause confusion.
 
-In hypergraph partitioning the goal is to separate vertices into multiple _partitions_ such that a metric on the cut is minimized (here cut is simply the set of edges that span more than one partition). The simplest (and often used) such metric is the number of cut edges.
+In hypergraph partitioning the goal is to separate vertices into multiple _partitions_ such that a the cut is minimized and partitions are approximately equal. Here cut is simply the set of edges that span more than one partition. The simplest (and often used) minimization objective is the number of cut edges. The condition that partitions must have approximately the same size is often called "imbalance constraint".
 
-More simply put, **we want to partition a hypergraph while cutting as few edges as possible**.
+Simply put, **we want to partition a hypergraph into mostly equal parts while cutting as few edges as possible**.
 
 The following figure provides an example of a hypergraph with 5 edges and 8 vertices.
 
