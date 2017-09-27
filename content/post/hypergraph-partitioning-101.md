@@ -26,7 +26,7 @@ In this post, I'll try to answer three basic questions:
 
 3. How would you partition it?
 
-Without much further ado, let's get started!
+Without much further ado, let's get started.
  
 <!--more-->
 
