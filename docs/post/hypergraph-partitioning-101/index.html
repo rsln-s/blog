@@ -110,7 +110,7 @@ Without much further ado, let&rsquo;s get started!
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="hypergraph partitioning,research,101," />
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Hypergraph Partitioning 101"/>
 <meta name="twitter:description" content="Hypergraphs and their partitionings: What do they know? Do they know things? Let&rsquo;s find out!
 
@@ -159,8 +159,6 @@ Without much further ado, let&rsquo;s get started!
         <li class="mobile-menu-item">Archives</li>
       </a><a href="/tags/">
         <li class="mobile-menu-item">Tags</li>
-      </a><a href="/categories/">
-        <li class="mobile-menu-item">Categories</li>
       </a><a href="http://shaydul.in">
         <li class="mobile-menu-item">About Ruslan</li>
       </a>
@@ -180,8 +178,6 @@ Without much further ado, let&rsquo;s get started!
         <a class="menu-item-link" href="/post/">Archives</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="/tags/">Tags</a>
-      </li><li class="menu-item">
-        <a class="menu-item-link" href="/categories/">Categories</a>
       </li><li class="menu-item">
         <a class="menu-item-link" href="http://shaydul.in">About Ruslan</a>
       </li>
@@ -261,7 +257,7 @@ Without much further ado, let&rsquo;s get started!
 
 <h2 id="what-is-it-for">What is it for?</h2>
 
-<p>Probably the most important application of hypergraph partitioning is VLSI design. Within the integrated chip logic often has to be partitioned into clusters, subject to area size and I/O bounds. The hypergraph is a natural representation of the circuit netlist connections: vertices correspond to modules and hyperedges correspond to signal nets, such that each hyperedge contains the vertices (modules) that the net connects.</p>
+<p>Probably the most important application of hypergraph partitioning is VLSI design. Within the integrated chip, logic often has to be partitioned into clusters, subject to area size and I/O bounds. The hypergraph is a natural representation of the circuit netlist connections: vertices correspond to modules and hyperedges correspond to signal nets, such that each hyperedge contains the vertices (modules) that the net connects.</p>
 
 <p>VLSI design is also the field where a second hypergraph terminology originates. According to it, hypergraph consists of three sets: hyperedge labels (or <em>nets</em>), vertices and pins<sup class="footnote-ref" id="fnref:2"><a rel="footnote" href="#fn:2">2</a></sup>. Each pin connects a vertex to a hyperedge label. In a way, this interprets the hypergraph as a bipartite graph, with vertices in one part, hyperedges in another and a set of edges (pins) connecting the two.</p>
 
@@ -346,7 +342,7 @@ Without much further ado, let&rsquo;s get started!
 <hr />
 
 <ol>
-<li id="fn:1">In other words, if graph is a pair of sets \(G=(V,E)\), where \(V\) is the set of vertices, \(E\) is the set of edges and the cardinality of each element in \(E\) is 2 (\(|e| = 2\,\forall e\in E\)), a hypergraph is the same pair \(H = (V,E)\), except the cardinality of elements in \(E\) is not limited.
+<li id="fn:1">In other words, if graph is a pair of sets \(G=(V,E)\), where \(V\) is the set of vertices, \(E\) is the set of edges and the cardinality of each element in \(E\) is two (\(|e| = 2\,\forall e\in E\)), a hypergraph is the same pair \(H = (V,E)\), except the cardinality of elements in \(E\) is not limited.
  <a class="footnote-return" href="#fnref:1"><sup>[return]</sup></a></li>
 <li id="fn:2">As opposed to just two sets: hyperedges and vertices.
  <a class="footnote-return" href="#fnref:2"><sup>[return]</sup></a></li>
@@ -363,7 +359,15 @@ Without much further ado, let&rsquo;s get started!
     
 
     <footer class="post-footer">
-      
+      <div class="post-tags">
+          
+          <a href="/tags/hypergraph-partitioning/">hypergraph partitioning</a>
+          
+          <a href="/tags/research/">research</a>
+          
+          <a href="/tags/101/">101</a>
+          
+        </div>
 
       
       <nav class="post-nav">

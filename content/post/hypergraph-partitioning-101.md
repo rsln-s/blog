@@ -3,10 +3,8 @@ title: "Hypergraph Partitioning 101"
 date: 2017-09-20T12:25:35-04:00
 lastmod: 2017-09-20T12:25:35-04:00
 draft: false
-keywords: []
 description: ""
-tags: []
-categories: []
+tags: [hypergraph partitioning, research, 101]
 author: "Ruslan Shaydulin"
 
 # you can close something for this content if you open it in config.toml.
@@ -51,7 +49,7 @@ Here the hypergraph is partitioned into two parts with vertices \\(A_i\\) is one
 
 ## What is it for?
 
-Probably the most important application of hypergraph partitioning is VLSI design. Within the integrated chip logic often has to be partitioned into clusters, subject to area size and I/O bounds. The hypergraph is a natural representation of the circuit netlist connections: vertices correspond to modules and hyperedges correspond to signal nets, such that each hyperedge contains the vertices (modules) that the net connects.
+Probably the most important application of hypergraph partitioning is VLSI design. Within the integrated chip, logic often has to be partitioned into clusters, subject to area size and I/O bounds. The hypergraph is a natural representation of the circuit netlist connections: vertices correspond to modules and hyperedges correspond to signal nets, such that each hyperedge contains the vertices (modules) that the net connects.
 
 VLSI design is also the field where a second hypergraph terminology originates. According to it, hypergraph consists of three sets: hyperedge labels (or _nets_), vertices and pins[^2]. Each pin connects a vertex to a hyperedge label. In a way, this interprets the hypergraph as a bipartite graph, with vertices in one part, hyperedges in another and a set of edges (pins) connecting the two.
 
@@ -93,6 +91,6 @@ As shown in the figure, multilevel hypergraph partitioning consists of three sta
 
 This is where I can finally explain my research! My work focuses around improving the quality of coarsening (left side of the "V") by improving the quality of matching. My first paper (with I. Safro and J. Chen) introduces a new similarity metric for vertices in hypergraph. But that is a story for a different blog post...
 
-[^1]: In other words, if graph is a pair of sets \\(G=(V,E)\\), where \\(V\\) is the set of vertices, \\(E\\) is the set of edges and the cardinality of each element in \\(E\\) is 2 (\\(|e| = 2\,\forall e\in E\\)), a hypergraph is the same pair \\(H = (V,E)\\), except the cardinality of elements in \\(E\\) is not limited. 
+[^1]: In other words, if graph is a pair of sets \\(G=(V,E)\\), where \\(V\\) is the set of vertices, \\(E\\) is the set of edges and the cardinality of each element in \\(E\\) is two (\\(|e| = 2\,\forall e\in E\\)), a hypergraph is the same pair \\(H = (V,E)\\), except the cardinality of elements in \\(E\\) is not limited.
 [^2]: As opposed to just two sets: hyperedges and vertices.
 [^3]: From  ["A Two-Dimensional Data Distribution Method for Parallel Sparse Matrix-Vector Multiplication by B. Vastenhouw et al."](http://epubs.siam.org/doi/abs/10.1137/S0036144502409019)
